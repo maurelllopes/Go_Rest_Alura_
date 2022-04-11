@@ -1,6 +1,7 @@
 package main
 
 import (
+	"Go_Rest_Alura_/database"
 	"Go_Rest_Alura_/models"
 	"Go_Rest_Alura_/routes"
 	"fmt"
@@ -12,6 +13,7 @@ func main() {
 		{Id: 1, Nome: "Nome 1", Historia: "Historia 1"},
 		{Id: 2, Nome: "Nome 2", Historia: "Historia 2"},
 	}
+	database.ConectaComBancoDeDados()
 	fmt.Println("Iniciando Servidor Rest com Go")
 	routes.HandleRequest()
 }
