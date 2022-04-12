@@ -14,6 +14,7 @@ func Home(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprint(w, "Home Page")
 }
 func TodasPersonalidades(w http.ResponseWriter, r *http.Request) {
+
 	var p []models.Personalidade
 	database.DB.Find(&p)
 	json.NewEncoder(w).Encode(p)
